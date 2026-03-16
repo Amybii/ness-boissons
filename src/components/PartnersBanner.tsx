@@ -1,13 +1,13 @@
 import Image from "next/image";
 
-const partners: { src: string; alt: string; width: number; invert?: boolean }[] = [
-  { src: "/partners/heineken.svg", alt: "Heineken", width: 150 },
-  { src: "/partners/pernod-ricard.svg", alt: "Pernod Ricard", width: 140 },
-  { src: "/partners/bacardi.svg", alt: "Bacardi", width: 120 },
-  { src: "/partners/budweiser.png", alt: "Budweiser", width: 150 },
-  { src: "/partners/coca-cola.svg", alt: "Coca-Cola", width: 130 },
-  { src: "/partners/orangina.svg", alt: "Orangina", width: 120 },
-  { src: "/partners/noailles.png", alt: "Noailles", width: 130, invert: true },
+const partners: { src: string; alt: string; invert?: boolean }[] = [
+  { src: "/partners/heineken.svg", alt: "Heineken" },
+  { src: "/partners/pernod-ricard.svg", alt: "Pernod Ricard" },
+  { src: "/partners/bacardi.svg", alt: "Bacardi" },
+  { src: "/partners/budweiser.png", alt: "Budweiser" },
+  { src: "/partners/coca-cola.svg", alt: "Coca-Cola" },
+  { src: "/partners/orangina.svg", alt: "Orangina" },
+  { src: "/partners/noailles.png", alt: "Noailles", invert: true },
 ];
 
 export default function PartnersBanner() {
@@ -34,14 +34,14 @@ export default function PartnersBanner() {
           {allPartners.map((partner, i) => (
             <div
               key={`${partner.alt}-${i}`}
-              className="flex items-center justify-center mx-12 grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300"
+              className="flex items-center justify-center mx-10 w-[140px] h-[60px] grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300"
             >
               <Image
                 src={partner.src}
                 alt={partner.alt}
-                width={partner.width}
+                width={140}
                 height={60}
-                className={`h-14 w-auto object-contain ${partner.invert ? "invert" : ""}`}
+                className={`max-h-[50px] max-w-[130px] w-auto h-auto object-contain ${partner.invert ? "invert" : ""}`}
               />
             </div>
           ))}
