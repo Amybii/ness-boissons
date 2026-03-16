@@ -34,14 +34,14 @@ export default function PartnersBanner() {
           {allPartners.map((partner, i) => (
             <div
               key={`${partner.alt}-${i}`}
-              className="flex items-center justify-center mx-10 w-[140px] h-[60px] grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300"
+              className="flex items-center justify-center mx-12 w-[160px] h-[80px] grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300"
             >
               <Image
                 src={partner.src}
                 alt={partner.alt}
-                width={140}
-                height={60}
-                className={`max-h-[50px] max-w-[130px] w-auto h-auto object-contain ${partner.invert ? "invert" : ""}`}
+                width={160}
+                height={80}
+                className={`max-h-[70px] max-w-[150px] w-auto h-auto object-contain ${partner.invert ? "invert" : ""}`}
               />
             </div>
           ))}
