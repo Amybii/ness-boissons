@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import AgeGate from "@/components/AgeGate";
 
 export const metadata: Metadata = {
   title: "Ness Boissons | Service de livraison express",
@@ -27,7 +28,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        <AgeGate>{children}</AgeGate>
+      </body>
     </html>
   );
 }
