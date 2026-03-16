@@ -95,6 +95,16 @@ export default function Footer() {
               </li>
               <li>
                 <a
+                  href="https://maps.google.com/?q=4+impasse+de+la+remusade+13010+Marseille"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-blanc transition-colors"
+                >
+                  4 impasse de la Remusade, 13010 Marseille
+                </a>
+              </li>
+              <li>
+                <a
                   href="https://www.instagram.com/ness_boissons"
                   target="_blank"
                   rel="noopener noreferrer"

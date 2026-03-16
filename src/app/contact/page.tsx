@@ -89,6 +89,21 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="text-jaune font-bold text-sm uppercase tracking-wider mb-1">
+                      Adresse
+                    </p>
+                    <a
+                      href="https://maps.google.com/?q=4+impasse+de+la+remusade+13010+Marseille"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-lg hover:text-jaune transition-colors"
+                    >
+                      4 impasse de la Remusade
+                      <br />
+                      13010 Marseille - La Capelette
+                    </a>
+                  </div>
+                  <div>
+                    <p className="text-jaune font-bold text-sm uppercase tracking-wider mb-1">
                       Réseaux sociaux
                     </p>
                     <a
