@@ -42,7 +42,7 @@ export default function Services() {
           {services.map((service) => (
             <div
               key={service.title}
-              className="bg-blanc rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow group"
+              className="bg-blanc rounded-2xl p-8 shadow-sm hover:shadow-lg hover:scale-105 transition-all duration-300 group"
             >
               <div className="w-16 h-16 mb-6 relative">
                 <Image

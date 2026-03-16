@@ -1,13 +1,13 @@
 import Image from "next/image";
 
-const partners = [
+const partners: { src: string; alt: string; width: number; invert?: boolean }[] = [
   { src: "/partners/heineken.svg", alt: "Heineken", width: 150 },
   { src: "/partners/pernod-ricard.svg", alt: "Pernod Ricard", width: 140 },
   { src: "/partners/bacardi.svg", alt: "Bacardi", width: 120 },
   { src: "/partners/budweiser.png", alt: "Budweiser", width: 150 },
   { src: "/partners/coca-cola.svg", alt: "Coca-Cola", width: 130 },
   { src: "/partners/orangina.svg", alt: "Orangina", width: 120 },
-  { src: "/partners/noailles.png", alt: "Noailles", width: 130 },
+  { src: "/partners/noailles.png", alt: "Noailles", width: 130, invert: true },
 ];
 
 export default function PartnersBanner() {
@@ -41,7 +41,7 @@ export default function PartnersBanner() {
                 alt={partner.alt}
                 width={partner.width}
                 height={60}
-                className="h-14 w-auto object-contain"
+                className={`h-14 w-auto object-contain ${partner.invert ? "invert" : ""}`}
               />
             </div>
           ))}
